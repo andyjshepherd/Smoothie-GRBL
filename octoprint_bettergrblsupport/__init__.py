@@ -949,7 +949,7 @@ class BetterGrblSupportPlugin(octoprint.plugin.SettingsPlugin,
         # M140 (set bed temperature)
         # M106 (fan on/off)
         # N -- suggests a line number and we don't roll like that
-        if cmd.upper().startswith(("M108", "M84", "M104", "M140", "M106", "N")):
+        if cmd.upper().startswith(("M108", "M84", "M104", "M140", "N")):
             self._logger.debug("ignoring [%s]", cmd)
             return (None, )
 
